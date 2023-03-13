@@ -23,16 +23,20 @@ def ogrenciekle(adsoyad):
 
 # Öğrenci bilgilerini silen fonksiyon.
 def ogrencisil():
-    adsoyad = input("Silinecek öğrenci bilgilerini giriniz :")
-    if adsoyad in ogrenciListesi:
-        print(f"{adsoyad} isimli ö1ğrenci bilgileri siliniyor...")
+    if len(ogrenciListesi)<=0:
         time.sleep(1)
-        ogrenciListesi.remove(adsoyad)
-        print("Öğrenci Silindi.")
-    elif len(ogrenciListesi) == 0:
-        print("Lİstede hiç öğrenci yok")
+        print("Hiç öğrenci yok")
     else:
-        print("Belirttiğiniz isimde öğrenci bulunamadı.")
+        adsoyad = input("Silinecek öğrenci bilgilerini giriniz :")
+        if adsoyad in ogrenciListesi:
+            print(f"{adsoyad} isimli ö1ğrenci bilgileri siliniyor...")
+            time.sleep(1)
+            ogrenciListesi.remove(adsoyad)
+            print("Öğrenci Silindi.")
+        elif len(ogrenciListesi) == 0:
+            print("Lİstede hiç öğrenci yok")
+        else:
+            print("Belirttiğiniz isimde öğrenci bulunamadı.")
 
 
 # Listedeki öğrencileri bu fonksiyon yazdırır.
