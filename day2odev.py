@@ -58,7 +58,7 @@ def cokluekle():
         templist.append(adsoyad)
         # for togrenci in templist:
         #     ogrenciListesi.append(togrenci)
-        print(templist)
+        print(f"Güncel liste {templist}")
         devammi = input("Devammı ? E/ H :")
         if devammi == "e":
             continue
@@ -92,6 +92,8 @@ def indexbul():
             index=ogrenciListesi.index(adsoyad)
             index+=1
             print(f"Öğrenci numarası {index} tir.")
+        else:
+            print(f"{adsoyad} adında bir öğrenci bulunamadı !!!! ")
         break
 
 while True:
