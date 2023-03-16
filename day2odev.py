@@ -56,7 +56,7 @@ def cokluekle():
     while True:
         adsoyad = input(" İsim giriniz :")
         templist.append(adsoyad)
-        # for togrenci in templist:
+        # for ogrenci in templist:
         #     ogrenciListesi.append(togrenci)
         print(f"Güncel liste {templist}")
         devammi = input("Devammı ? E/ H :")
@@ -69,20 +69,31 @@ def cokluekle():
 
 
 def coklusil():
-    while True:
+    while len(ogrenciListesi)!=0:
         print(ogrenciListesi)
         adsoyad = input("Silinecek isim yazınız :")
         templist.append(adsoyad)
+        
         devammi = input("Devammı ? E/ H :")
         if devammi == "e":
             continue
-        else:
+        elif devammi=="h":
             for ogrenci in templist:
-                print("Öğrenciler Siliniyor ...")
-                time.sleep(1)
-                ogrenciListesi.remove(ogrenci)
-                print("Öğrenci silindi....")
-            break
+                if ogrenci in ogrenciListesi:
+                    ogrenciListesi.remove(ogrenci)
+                    print(f"{ogrenci} isimli 1ogrenci silindi")
+                    if len(ogrenciListesi)==0:
+                        print("listede öğprenci bilgisi kalmamıştır.")
+                        break
+                
+       
+                
+        
+                
+                
+        
+                
+                
 
 
 def indexbul():
