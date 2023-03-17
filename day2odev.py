@@ -23,7 +23,7 @@ def ogrenciekle(adsoyad):
 
 # Öğrenci bilgilerini silen fonksiyon.
 def ogrencisil():
-    if len(ogrenciListesi)<=0:
+    if len(ogrenciListesi) <= 0:
         time.sleep(1)
         print("Hiç öğrenci yok")
     else:
@@ -45,7 +45,7 @@ def ogrenciyazdir():
     time.sleep(1)
     for ogrenci in ogrenciListesi:
         print(ogrenci)
-    
+
     if len(ogrenciListesi) == 0:
         print("Listede öğrenci yoktur")
     else:
@@ -63,49 +63,43 @@ def cokluekle():
         if devammi == "e":
             continue
         else:
-            for ogrenci in templist:
-                ogrenciListesi.append(ogrenci)
+            ogrenciListesi.extend(templist)
+            # for ogrenci in templist:
+            #     ogrenciListesi.append(ogrenci)
+            print(f"{len(templist)} Adet öğrenci listeye eklenmiştir.")
+            print(ogrenciListesi)
             break
 
 
 def coklusil():
-    while len(ogrenciListesi)!=0:
+    while len(ogrenciListesi) != 0:
         print(ogrenciListesi)
         adsoyad = input("Silinecek isim yazınız :")
         templist.append(adsoyad)
-        
         devammi = input("Devammı ? E/ H :")
         if devammi == "e":
             continue
-        elif devammi=="h":
+        elif devammi == "h":
             for ogrenci in templist:
                 if ogrenci in ogrenciListesi:
                     ogrenciListesi.remove(ogrenci)
                     print(f"{ogrenci} isimli 1ogrenci silindi")
-                    if len(ogrenciListesi)==0:
+                    if len(ogrenciListesi) == 0:
                         print("listede öğprenci bilgisi kalmamıştır.")
                         break
-                
-       
-                
-        
-                
-                
-        
-                
-                
 
 
 def indexbul():
     while True:
-        adsoyad=input("Numarasını öğreneceğiniz Öğenci adı giriniz : ")
+        adsoyad = input("Numarasını öğreneceğiniz Öğenci adı giriniz : ")
         if adsoyad in ogrenciListesi:
-            index=ogrenciListesi.index(adsoyad)
-            index+=1
+            index = ogrenciListesi.index(adsoyad)
+            index += 1
             print(f"Öğrenci numarası {index} tir.")
         else:
             print(f"{adsoyad} adında bir öğrenci bulunamadı !!!! ")
         break
+
 
 while True:
     # Menü gösterimi burada.

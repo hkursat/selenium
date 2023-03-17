@@ -22,6 +22,7 @@ class Matematik:
         self.sayi2 = sayi2
 
     def topla(self):
+        
         return self.sayi1+self.sayi2
 
     def cikar(self):
