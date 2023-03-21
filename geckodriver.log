@@ -1,0 +1,5 @@
+1679175488615	geckodriver	INFO	Listening on 127.0.0.1:54110
+1679175488971	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "54111" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/fh/cwf1xx4j2s3gnl0zjr0q7p040000gn/T/rust_mozprofilehceN7A"
+2023-03-19 00:38:33.037 firefox-bin[94681:3787130] Unable to install helper!
+WebDriver BiDi listening on ws://127.0.0.1:54111
+DevTools listening on ws://127.0.0.1:54111/devtools/browser/8187ad8b-cb71-4150-8332-0b6de26d581b

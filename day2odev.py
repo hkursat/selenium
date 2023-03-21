@@ -76,7 +76,7 @@ def coklusil():
         print(ogrenciListesi)
         adsoyad = input("Silinecek isim yazınız :")
         templist.append(adsoyad)
-        devammi = input("Devammı ? E/ H :")
+        devammi = input("Devammı ? E/ H :").lower()
         if devammi == "e":
             continue
         elif devammi == "h":
